@@ -1,0 +1,36 @@
+<div id="modifier">
+
+    <div style="position:absolute;
+                left:0;
+                right:0;
+                height:20px;
+                padding:20px;
+                background:red;
+                opacity:.9;
+                outline: 2px solid black;
+                outline-offset: -8px;">
+
+
+        <input type="text" 
+              [(ngModel)]="whitelist_label" 
+              (keyup)="handleWhiteListChange($event)"
+               placeholder="Filter Unrelated Nodes"
+               style="width:160px;
+                      color:red;" />
+
+        <span style="float:right;
+                     color:white;
+                     font-size:12px;">
+
+            <!-- <input type="checkbox" 
+                   id="show_labels" />
+            <label for="show_labels">Show labels</label> -->
+
+            <cmenu *ngIf="activemenu"
+                   [nodedata]="fetcheddata"
+                   [closetrigger]="closetrigger"></cmenu>
+        </span>
+
+        
+    </div> 
+</div>
